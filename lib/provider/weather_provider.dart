@@ -11,6 +11,8 @@ class WeatherProvider with ChangeNotifier {
   List<Weather>? forecastWeatherList;
   Weather? displayedWeather;
 
+
+  // For loading the weather data
   Future<void> loadWeatherData(BuildContext context) async {
     try {
       List<Weather> allWeatherList = await _weatherService.fetchWeatherDataFromApi();
@@ -63,6 +65,7 @@ class WeatherProvider with ChangeNotifier {
     }
   }
 
+  // Error handlig
   void _showErrorDialog(BuildContext context, int? errorCode, String message) {
     showDialog(
       context: context,

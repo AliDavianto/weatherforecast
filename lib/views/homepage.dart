@@ -8,6 +8,7 @@ import 'package:lottie/lottie.dart';
 import 'package:intl/intl.dart'; // Ensure this import is included for date formatting
 
 class Homepage extends StatelessWidget {
+  //Main view
   const Homepage({super.key});
 
   @override
@@ -30,12 +31,16 @@ class Homepage extends StatelessWidget {
                 children: [
                   if (weatherProvider.displayedWeather != null) ...[
                     const SizedBox(height: 20),
+
+                    // Today's forecast
                     CurrentWeatherDisplay(
                         weather: weatherProvider.displayedWeather!),
                     const SizedBox(height: 24),
                     WeatherDetails(weather: weatherProvider.displayedWeather!),
                   ],
                   const SizedBox(height: 24),
+
+                  //Next 3 days forecat
                   const NextDaysTitle(),
                   const SizedBox(height: 24),
                   if (weatherProvider.forecastWeatherList != null &&
@@ -55,6 +60,7 @@ class Homepage extends StatelessWidget {
   }
 }
 
+//Location and date widget
 class LocationAndDate extends StatelessWidget {
   const LocationAndDate({super.key});
 
@@ -99,6 +105,7 @@ class LocationAndDate extends StatelessWidget {
   }
 }
 
+//Current Weather Display Widget
 class CurrentWeatherDisplay extends StatelessWidget {
   final Weather weather;
 
@@ -170,6 +177,8 @@ class CurrentWeatherDisplay extends StatelessWidget {
   }
 }
 
+
+//WeatherDetails Widget
 class WeatherDetails extends StatelessWidget {
   final Weather weather;
 
@@ -204,6 +213,7 @@ class WeatherDetails extends StatelessWidget {
   }
 }
 
+//Weather Detail Item Widget
 class WeatherDetailItem extends StatelessWidget {
   final String imagePath;
   final String value;
@@ -241,6 +251,7 @@ class WeatherDetailItem extends StatelessWidget {
   }
 }
 
+// Next 3 days forecast widget
 class NextDaysTitle extends StatelessWidget {
   const NextDaysTitle({super.key});
 
