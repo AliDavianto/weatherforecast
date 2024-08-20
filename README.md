@@ -43,7 +43,7 @@ To run the Weather Forecast app on your local machine, follow these steps:
 
 5. **Run the app:**
     ```bash
-  flutter run
+   flutter run
 
 ## Usage
 
