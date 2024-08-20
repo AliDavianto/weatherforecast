@@ -29,11 +29,11 @@ To run the Weather Forecast app on your local machine, follow these steps:
    git clone https://github.com/your-username/weather-forecast.git
 
 2. **Navigate to the project directory:**
-
+    ```bash
    cd weather-forecast
 
 3. **Install the dependencies:**
-
+    ```bash
    flutter pub get
 
 4. **Set up the OpenWeatherMap API:**
@@ -42,7 +42,7 @@ To run the Weather Forecast app on your local machine, follow these steps:
   - Replace YOUR_API_KEY in lib/services/weather_service.dart with your API key.
 
 5. **Run the app:**
-
+    ```bash
   flutter run
 
 ## Usage
