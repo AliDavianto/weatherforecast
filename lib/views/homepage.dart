@@ -114,7 +114,7 @@ class CurrentWeatherDisplay extends StatelessWidget {
       if (description.contains("cloud")) {
         return "assets/animation/moon_clouds.json";
       } else if (description.contains("rain")) {
-        return "assets/animation/moon_rain.json"; // Assuming you have this animation
+        return "assets/animation/rain.json"; // Assuming you have this animation
       } else if (description.contains("clear") ||
           description.contains("sunny")) {
         return "assets/animation/moon.json"; // Assuming you have this animation
