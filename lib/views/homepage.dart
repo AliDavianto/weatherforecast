@@ -16,7 +16,7 @@ class Homepage extends StatelessWidget {
 
     // Fetch weather data once the widget is built
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      weatherProvider.loadWeatherData();
+      weatherProvider.loadWeatherData(context);
     });
 
     return Scaffold(
